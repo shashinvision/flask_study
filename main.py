@@ -1,4 +1,4 @@
-from flask import Flask, url_for, request
+from flask import Flask, url_for, request, render_template
 from markupsafe import escape
 
 
@@ -64,3 +64,9 @@ def login_get():
 @app.post('/login_post')
 def login_post():
     return 'login_post()'
+
+
+@app.route('/hello/')
+@app.route('/hello/<name>')
+def hello_name(name=None):
+    return render_template('hello.html', name=name)
