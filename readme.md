@@ -21,3 +21,13 @@ flask --app main run --host=0.0.0.0 --debug
 ```
 gunicorn -w 4 -b 0.0.0.0:5000 main:app
 ```
+
+## Freeze 
+```
+pip freeze > requirements.txt
+```
+
+## install requirements
+```
+pip install -r requirements.txt
+```
